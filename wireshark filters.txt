@@ -1,0 +1,1 @@
+(ip.dst == 10.1.1.xx && ip.src == 10.1.1.yy) || (ip.dst = 10.1.1.yy && ip.src = 10.1.1.xx)

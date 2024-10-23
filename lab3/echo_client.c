@@ -70,7 +70,7 @@ int main(int argc, char **argv) {
 
 
     // Open the file to save received data
-    received_file_fd = open(filename, O_WRONLY | O_TRUNC, 0644);
+    received_file_fd = open(filename, O_CREAT |  O_WRONLY | O_TRUNC, 0644);
     if (received_file_fd < 0) {
         perror("Failed to open file for writing");
         close(sd);
