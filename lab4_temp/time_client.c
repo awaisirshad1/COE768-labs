@@ -96,6 +96,7 @@ int main(int argc, char **argv) {
             recvfrom(sockfd, &spdu, sizeof(spdu), 0, (struct sockaddr *)&server_addr, &addr_len);
             if (spdu.type == 'E') {
                 printf("Error: %s\n", spdu.data);
+                remove(filename);
                 break;
             } else if (spdu.type == 'F') {
                 printf("Received final batch of file data.\n");
@@ -112,7 +113,7 @@ int main(int argc, char **argv) {
             } else if (spdu.type == 'D') {
                 printf("Received data: %s\n", spdu.data);
                 // write to file
-                fprintf(file,  "%.*s", 100, spdu.data);
+                fprintf(file,  "%.*s", 100, spdu );
                 //write(received_file, spdu.data, sizeof(spdu.data));
                 //write(received_file, '\0', 1);
                 // Save data to file or process accordingly
