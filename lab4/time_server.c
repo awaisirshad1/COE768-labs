@@ -21,8 +21,7 @@ struct pdu {
 
 
 
-int
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	struct pdu request; 
 	struct pdu response;
