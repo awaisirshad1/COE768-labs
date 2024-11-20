@@ -14,7 +14,11 @@ struct pdu{
     char data[MAX_PDU_DATA_SIZE];
 };
 
-void registerPeer(void){}
+
+// index server needs to constantly listen for peers requests to connect to another peer over   
+void registerPeer(void){
+
+}
 
 int main(void){
 
