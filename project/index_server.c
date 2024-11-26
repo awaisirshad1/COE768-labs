@@ -21,11 +21,11 @@ void registerPeer(){
     struct pdu request; 
 	struct pdu response;
     struct sockaddr_in client_addr;	/* the from address of a client	*/
-
-    
 }
 
 int main(void){
-
-
+    int socket desc;
+    struct sockaddr_in server_address, client_address;
+    
+    return (0);
 }
