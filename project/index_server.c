@@ -7,12 +7,22 @@
 #include <stdio.h>
 #include <time.h>
 #include "libr.h"
+#define FILE_NAME_MAX 20
+#define UPD_MAX_BUF 100
+#define NOT_FOUND "Content Not Found"
+#define MAX_LEDGER_ENTRIES 50
 
-struct IndexLedgerEntry{
-    char *peerName;
-    char *contentName;
-};
+typedef truct ledger_entry{
+    char peerName[FILE_NAME_MAX];
+    char ip_addr[16];
+    char port_num[7];
+    int token;
+    struct ledger_entry * next;
+} LEDGER_ENTRY;
 
+typedef srtuct { 
+    char 
+} LEDGER;
 struct IndexLedgerEntry IndexLedger[NUM_PEERS];
 
 char *contentLedger[];
